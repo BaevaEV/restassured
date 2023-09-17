@@ -5,7 +5,7 @@ public class HomeworkTwo {
     @Test
     public void homeworkPrettyTest(){
         RestAssured.given()
-                .get("http://172.24.120.5:8081/api/users/login_user_lesson/notes/archive")
+                .get("http://172.24.120.5:8081/api/users/BAEVA/notes/archive")
                 .andReturn()
                 .prettyPrint();
     }
@@ -14,7 +14,7 @@ public class HomeworkTwo {
     public void homeworkLogTest(){
         RestAssured.given()
                 .log().all()
-                .get("http://172.24.120.5:8081/api/users/login_user_lesson/notes/archive")
+                .get("http://172.24.120.5:8081/api/users/BAEVA/notes/archive")
                 .then()
                 .log().all()
                 .statusCode(403);
@@ -23,7 +23,7 @@ public class HomeworkTwo {
     @Test
     public void homeworkFailedTest(){
         RestAssured.given()
-                .get("http://172.24.120.5:8081/api/users/login_user_lesson/notes/archive")
+                .get("http://172.24.120.5:8081/api/users/BAEVA/notes/archive")
                 .then()
                 .log().ifValidationFails()
                 .statusCode(200);
@@ -32,7 +32,7 @@ public class HomeworkTwo {
     @Test
     public void homeworkBodyTest(){
         RestAssured.given()
-                .get("http://172.24.120.5:8081/api/users/login_user_lesson/notes/archive")
+                .get("http://172.24.120.5:8081/api/users/BAEVA/notes/archive")
                 .then()
                 .log().body()
                 .statusCode(403);
@@ -41,7 +41,7 @@ public class HomeworkTwo {
     @Test
     public void homeworkHeadersTest(){
         RestAssured.given()
-                .get("http://172.24.120.5:8081/api/users/login_user_lesson/notes/archive")
+                .get("http://172.24.120.5:8081/api/users/BAEVA/notes/archive")
                 .then()
                 .log().headers()
                 .statusCode(403);
