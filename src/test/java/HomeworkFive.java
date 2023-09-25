@@ -4,6 +4,7 @@ import org.junit.Test;
 
 import java.util.HashMap;
 import java.util.Map;
+import org.junit.jupiter.api.Assertions;
 
 public class HomeworkFive {
 
@@ -20,12 +21,14 @@ public void FormParamsTest() {
             .jsonPath();
 
 
-        String token = responce.get("_token");
-     if(token!= null){
-         System.out.println("ПОЛУЧЕНЫЙ ТОКЕН: "+ token);
-     } else {
-         System.out.println("Полученный токен равен null");
-     }
+        String token = responce.get("refresh_token");
+        Assertions.assertNotNull(token,"Не был получен access_token");
+
+//     if(token!= null){
+//         System.out.println("ПОЛУЧЕНЫЙ ТОКЕН: "+ token);
+//     } else {
+//         System.out.println("Полученный токен равен null");
+//     }
 }
 
 }
