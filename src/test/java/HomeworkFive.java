@@ -14,14 +14,14 @@ public void FormParamsTest() {
     params.put("username", "BAEVA");
     params.put("password", "Start123");
 
-    JsonPath responce = RestAssured.given()
+    JsonPath response = RestAssured.given()
             .log().uri()
             .formParams(params)
             .get("http://172.24.120.5:8081/api/login")
             .jsonPath();
 
 
-        String token = responce.get("refresh_token");
+        String token = response.get("refresh_token");
         Assertions.assertNotNull(token,"Не был получен access_token");
 
 //     if(token!= null){
