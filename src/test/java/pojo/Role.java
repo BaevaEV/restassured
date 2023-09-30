@@ -10,10 +10,13 @@ public class Role {
     }
 
 
-        public static void main (String[]args){
+
+    public static void main (String[]args){
             Role.id = "123";
             Role.name = "123";
             String something = "123";
+
+
 
             // Рефлексивность
             System.out.println("Рефлексивность, id = id " +" "+ id.equals(id));
