@@ -17,7 +17,6 @@ public class Role {
             String something = "123";
 
 
-
             // Рефлексивность
             System.out.println("Рефлексивность, id = id " +" "+ id.equals(id));
             System.out.println("Рефлексивность, name = name " +" "+ name.equals(name));
