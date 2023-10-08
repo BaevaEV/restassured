@@ -10,7 +10,7 @@ import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.Matchers.*;
 import static org.hamcrest.text.IsEqualIgnoringWhiteSpace.equalToIgnoringWhiteSpace;
 
-public class HomeworkTwelveAssertions {
+public class HomeworkTwelveMatchers {
 
     public String token;
     private String urlLogin = "http://172.24.120.5:8081/api/login";
