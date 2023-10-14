@@ -1,19 +1,55 @@
 package pojo;
 
-public class Role {
-    private static String id;
-    private static String name;
+import java.util.Objects;
 
-    public Role(String id, String name) {
+public class Role {
+    private String id;
+    private String name;
+
+
+    public Role() {
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
         this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
         this.name = name;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Role)) return false;
+        Role role = (Role) o;
+        return Objects.equals(getId(), role.getId());
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId());
+    }
 
-    public static void main (String[]args){
-            Role.id = "123";
-            Role.name = "123";
+    @Override
+    public String toString() {
+        return "Role{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                '}';
+    }
+
+    public void main(String[] args){
+        this.id = "123";
+        this.name = "123";
             String something = "123";
 
 
