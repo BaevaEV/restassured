@@ -2,11 +2,6 @@ package pojo;
 
 import lombok.*;
 
-@Getter
-@Setter
-@NoArgsConstructor
-@ToString
-@EqualsAndHashCode
 @Data
 public class Note {
 

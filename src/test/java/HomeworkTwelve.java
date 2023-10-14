@@ -18,10 +18,10 @@ public class HomeworkTwelve {
     public void createNoteTest() {
 
         User newUser = new User();
-        newUser.setLogin("Penny");
-        newUser.setPassword("123123");
+        newUser.setLogin("Velma");
+        newUser.setPassword("256325");
         newUser.setEmail("so@cool.ru");
-        newUser.setNewNotePenny();
+        newUser.setNewNote("Вот снова", "Невозможно постоянно придумывать контент", "зеленый", Integer.parseInt("7"));
 
         UserCreationDTO userCreationDTO = new UserCreationDTO();
         userCreationDTO.setLogin(newUser.getLogin());

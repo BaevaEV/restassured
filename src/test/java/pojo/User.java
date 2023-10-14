@@ -4,11 +4,7 @@ import lombok.*;
 
 import java.util.ArrayList;
 import java.util.List;
-@Getter
-@Setter
-@NoArgsConstructor
-@ToString
-@EqualsAndHashCode
+
 @Data
 public class User {
 
@@ -20,26 +16,22 @@ public class User {
 
     private List<Note> notes;
 
-    public void setNewNoteAmy(){
-        Note newNoteRa = new Note();
-        newNoteRa.setName("radium");
-        newNoteRa.setContent("radium is Ra");
-        newNoteRa.setColor("оранжевый");
-        newNoteRa.setPriority("0");
+    public List<Note> setNewNote(String name, String content, String color, int priority){
 
-        Note newNoteCr = new Note();
-        newNoteCr.setName("chrome");
-        newNoteCr.setContent("chrome is Cr");
-        newNoteCr.setColor("зеленый");
-        newNoteCr.setPriority("0");
+        Note newNote = new Note();
+        newNote.setName(name);
+        newNote.setContent(content);
+        newNote.setColor(color);
+        newNote.setPriority(String.valueOf(priority));
+
 
         List<Note> newListNote = new ArrayList<>();
-        newListNote.add(newNoteCr);
-        newListNote.add(newNoteRa);
+        newListNote.add(newNote);
 
 
         this.notes = newListNote;
 
+        return newListNote;
     }
     public void setNewNotePenny(){
 
