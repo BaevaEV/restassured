@@ -19,7 +19,7 @@ public class HomeworkThirteen {
     public void dtoTest() throws IOException {
 
         User newUser = new User();
-        newUser.setLogin("Lidiaaaaaaaaaaaa");
+        newUser.setLogin("Mua");
         newUser.setPassword("2563987");
         newUser.setEmail("mail@mail.ru");
         newUser.setNewNote("Придумать текст", "Сложно придумать текст", "зеленый", Integer.parseInt("7"));
@@ -31,7 +31,7 @@ public class HomeworkThirteen {
         userCreationDTO.setNotes(newUser.getNotes());
 
         GetMeDTO getMeDTOExpected = new GetMeDTO();
-        getMeDTOExpected.setLogin("Lidia");
+        getMeDTOExpected.setLogin("Mua");
         getMeDTOExpected.setPassword("2563987");
         getMeDTOExpected.setEmail("mail@mail.ru");
         getMeDTOExpected.setNotes(newUser.setNewNote("Придумать текст", "Сложно придумать текст", "зеленый", Integer.parseInt("7")));
@@ -58,7 +58,7 @@ public class HomeworkThirteen {
     public void schemaTest() throws IOException {
 
         User newUser = new User();
-        newUser.setLogin("Lidiaaaaaaaaaaaaaa");
+        newUser.setLogin("Moa");
         newUser.setPassword("2563987");
         newUser.setEmail("mail@mail.ru");
         newUser.setNewNote("Придумать текст", "Сложно придумать текст", "зеленый", Integer.parseInt("7"));
