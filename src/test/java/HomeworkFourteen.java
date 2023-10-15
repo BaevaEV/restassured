@@ -36,9 +36,6 @@ public class HomeworkFourteen {
     @Test
     public void createFullNoteTest() {
 
-        JsonPath responseBody = getRequest();
-        String token = getAccessToken(responseBody);
-
 
         ArrayList<Map<String, String>> arrayList = new ArrayList<>();
         Map<String, String> createNoteBody = new HashMap<>();
@@ -58,9 +55,6 @@ public class HomeworkFourteen {
     @Test
     public void createNoteNameTest() {
 
-        JsonPath responseBody = getRequest();
-        String token = getAccessToken(responseBody);
-
 
         ArrayList<Map<String, String>> arrayList = new ArrayList<>();
         Map<String, String> createNoteBody = new HashMap<>();
@@ -77,17 +71,11 @@ public class HomeworkFourteen {
     @Test
     public void createNoteNameAndContentTest() {
 
-        JsonPath responseBody = getRequest();
-        String token = getAccessToken(responseBody);
-
-
         ArrayList<Map<String, String>> arrayList = new ArrayList<>();
         Map<String, String> createNoteBody = new HashMap<>();
         createNoteBody.put("name", "Автотесты");
         createNoteBody.put("content", "это круто!");
         arrayList.add(createNoteBody);
-
-
 
 
         RestAssured.given(requestSpecification)
